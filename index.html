@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRINGO gourmet</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Vedhæft google font family-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!--Header start-->
+    <header>
+
+        <!--logo-->
+        <div class="logo"></div>
+
+        <!--Burger menu start-->
+        <div class="burger">
+
+            <!--Første streg-->
+            <div class="bar1"></div>
+
+            <!--Næste streg-->
+            <div class="bar2"></div>
+
+            <!--Sidste streg-->
+            <div class="bar3"></div>
+        </div>
+        <!--Burger menu slut-->
+
+        <!--Dropdown menu efter klik på burgermenuen-->
+        <nav>
+            <ul>
+                <div class="logo-drop"></div>
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html">about</a></li>
+                <li><a href="index.html">reservation</a></li>
+                <li><a href="index.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Header slut-->
+
+    <!--sideknapper til reservation og kontakt-->
+    <div class="reservation"><a href="#">reservation</a></div>
+    <div class="contact"><a href="#">contact</a></div>
+
+    <!--main start-->
+    <main>
+
+        <!--Filtrerings-knapper til indholdet i sectionen "data-container"-->
+        <section class="filter">
+            <button class="menu-item" data-kategori="alle">all</button>
+            <button class="menu-item" data-kategori="forretter">starter</button>
+            <button class="menu-item" data-kategori="hovedretter">main course</button>
+            <button class="menu-item" data-kategori="desserter">dessert</button>
+        </section>
+
+        <!--Her vises indholdet fra templat'en-->
+        <section class="data-container"></section>
+    </main>
+    <!--main slut-->
+
+    <!--Template start-->
+    <template class="data-template">
+        
+        <!--Artiklen starter-->
+        <article>
+            
+            <!--Billedet fra json-filen-->
+            <img src="" alt="" class="dish-left" data-billede>
+            
+            <!--Teksten fra json-filen-->
+            <div class="txt-box">
+                
+                <!--Navnet på retten-->
+                <h2 class="info" data-navn></h2>
+                
+                <!--Kort beskrivelse om retten-->
+                <p><span class="kortbeskrivelse"></span><span class="more"> ...</span></p>
+                
+                <!--Prisen på retten-->
+                <p><span class="price"></span></p>
+            </div>
+        </article>
+        <!--Artiklen slutter-->
+        
+    </template>
+    <!--Template slut-->
+
+    <!--Footer start-->
+    <footer>
+
+        <!--Tabel-->
+        <ul>
+            <!--Restaurangens kontakt oplysninger-->
+            <li>GRINGO gourmet A/S</li>
+            <li>Kødbyen 26</li>
+            <li>1711 København</li>
+            <li>(+45) 32764355</li>
+        </ul>
+    </footer>
+    <!--Footer slut-->
+
+    <!--Et mønster der ligger oppe i højre hjørne på siden-->
+    <div id="deco"></div>
+
+    <!--Her indsætes javascrift-filen-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/gringo.js"></script>
+</body>
+
+</html>
